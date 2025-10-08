@@ -9,15 +9,20 @@
 5. **Mocking is only carried out inside the unit test package**
 
 ## Chameleon Testing Philosophy
+1. To achieve better test coverage, we perform both positive and negative tests using a Mock (Stub) class. 
+2. This class is designed to exhibit almost schizophrenic behaviour, which can be controlled via an enumerated parameter passed at instantiation.  
+3. The philosophy behind this approach is to simulate multiple internal states of a service without changing production code. By configuring the mock, tests can mimic:
 
-In order to achieve better test coverage, we perform both positive and negative tests using a Mock (Stub) class. This class is designed to exhibit almost schizophrenic behaviour, which can be controlled via an enumerated parameter passed at instantiation.  
-
-The philosophy behind this approach is to simulate multiple internal states of a service without changing production code. By configuring the mock, tests can mimic:
-
+### The CamelionTestBehavior enum
 We start with an enum: **CamelionTestBehavior**, which controls the behaviour of the Mock class, giving us these Behaviours:
 - **Successful behaviour** – producing expected, valid outputs.  
 - **Failure behaviour** – producing invalid or negative outputs to simulate a malfunction.  
 - **Exceptional behaviour** – throwing errors to verify how the system responds to unexpected conditions.  
+
+### The Mock Class:
+1. **We make the default constructor private**.
+2. **We pass the CamelionTestBehavior enum as a parameter of the overridden constructor**.
+3. **Our unit test instantiates the class using the overridden constructor with different enum values, allowing us to control the test behaviour**.
 
 This enables comprehensive testing of error handling, edge cases, and service resilience in a controlled and repeatable manner.
 
