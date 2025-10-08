@@ -36,7 +36,71 @@ public enum CamelionTestBehavior {
 
 This enables comprehensive testing of error handling, edge cases, and service resilience in a controlled and repeatable manner.
 
-**This class is in the unit test package**
+An example of a Mock Class
+```java
+
+public class MockCalculationService implements CalculationService {
+
+  private final CamelionTestBehavior behaviour;
+
+  // Private default constructor
+  private MockCalculationService() {}
+
+  // Public constructor with behaviour parameter
+  public MockCalculationService(CamelionTestBehavior behaviour) {
+    this.behaviour = behaviour;
+  }
+
+  @Override
+  public int addTwoTo(int value) throws Exception {
+    switch (behaviour) {
+      case PASSING_TEST:
+        return value + 2;
+      case FAILING_TEST:
+        return -1 * Math.abs(value + 2);
+      case THROWS_EXCEPTIONS:
+        throw new Exception("Simulated exception for testing");
+      default:
+        return value;
+    }
+  }
+}
+```
+
+**This class is in the unit test package: mocking**
+
+---
+
+### The Unit test that uses the Mock class
+An example of a Unit test that uses a Mock Class
+```java
+
+class MockCalculationServiceTest {
+
+  @Test
+  void testPassingTestBehaviour() throws Exception {
+    MockCalculationService service = new MockCalculationService(CamelionTestBehavior.PASSING_TEST);
+    int result = service.addTwoTo(3);
+    assertEquals(5, result, "PASSING_TEST should return value + 2");
+  }
+
+  @Test
+  void testFailingTestBehaviour() throws Exception {
+    MockCalculationService service = new MockCalculationService(CamelionTestBehavior.FAILING_TEST);
+    int result = service.addTwoTo(3);
+    assertTrue(result < 0, "FAILING_TEST should return a negative value");
+  }
+
+  @Test
+  void testThrowsExceptionsBehaviour() {
+    MockCalculationService service = new MockCalculationService(CamelionTestBehavior.THROWS_EXCEPTIONS);
+    assertThrows(Exception.class, () -> service.addTwoTo(3),
+        "THROWS_EXCEPTIONS should throw an Exception");
+  }
+}
+```
+
+**This class is in the unit test package: mocking**
 
 ---
 
