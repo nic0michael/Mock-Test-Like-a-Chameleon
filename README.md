@@ -14,6 +14,7 @@ In order to achieve better test coverage, we perform both positive and negative 
 
 The philosophy behind this approach is to simulate multiple internal states of a service without changing production code. By configuring the mock, tests can mimic:
 
+We start with an enum which controls the behaviour of the Mock class, giving us these Behaviours:
 - **Successful behaviour** – producing expected, valid outputs.  
 - **Failure behaviour** – producing invalid or negative outputs to simulate a malfunction.  
 - **Exceptional behaviour** – throwing errors to verify how the system responds to unexpected conditions.  
