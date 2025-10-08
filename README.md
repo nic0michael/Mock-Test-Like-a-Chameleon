@@ -3,7 +3,7 @@
 
 ## Problem Statement
 1. **Using Mockito** to write unit tests as an afterthought **produces brittle unit tests**.
-2. We wanted to **implement Mcking using proper Mock classes**.
+2. We wanted to **implement Mocking using proper Mock classes**.
 3. **Not every Java developer likes Mockito**, this is for them
 4. **This uses Real Mocking**.
 
