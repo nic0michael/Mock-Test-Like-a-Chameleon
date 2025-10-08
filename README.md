@@ -19,12 +19,24 @@ We start with an enum: **CamelionTestBehavior**, which controls the behaviour of
 - **Failure behaviour** – producing invalid or negative outputs to simulate a malfunction.  
 - **Exceptional behaviour** – throwing errors to verify how the system responds to unexpected conditions.  
 
+This enum will have this code:
+```java
+public enum CamelionTestBehavior {
+  PASSING_TEST,       // Mock class returns valid values
+  FAILING_TEST,       // Mock class returns invalid values
+  THROWS_EXCEPTIONS   // Mock class throws exceptions
+}
+```
+**This enum is in the unit test package**
+
 ### The Mock Class:
 1. **We make the default constructor private**.
 2. **We pass the CamelionTestBehavior enum as a parameter of the overridden constructor**.
 3. **Our unit test instantiates the class using the overridden constructor with different enum values, allowing us to control the test behaviour**.
 
 This enables comprehensive testing of error handling, edge cases, and service resilience in a controlled and repeatable manner.
+
+**This class is in the unit test package**
 
 ---
 
