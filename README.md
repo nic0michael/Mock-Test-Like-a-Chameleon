@@ -1,6 +1,12 @@
 # Chameleon Testing with Schizophrenic Behaviour
 **We are not walking like an Egyptian, we are Mocking like a Chameleon**
 
+## Problem Statement
+1. **Using Mockito** to write unit tests as an afterthought **produces brittle unit tests**.
+2. We wanted to **implement Mcking using proper Mock classes**.
+3. **Not every Java developer likes Mockito**, this is for them
+4. **This uses Real Mocking**.
+
 ## Chameleon Testing Philosophy
 
 In order to achieve better test coverage, we perform both positive and negative tests using a Mock (Stub) class. This class is designed to exhibit almost schizophrenic behaviour, which can be controlled via an enumerated parameter passed at instantiation.  
