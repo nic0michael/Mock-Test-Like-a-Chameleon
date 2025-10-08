@@ -6,6 +6,7 @@
 2. We wanted to **implement Mocking using proper Mock classes**.
 3. **Not every Java developer likes Mockito**, this is for them
 4. **This uses Real Mocking**.
+5. **Mocking is only carried out inside the unit test package**
 
 ## Chameleon Testing Philosophy
 
