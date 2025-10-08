@@ -1,4 +1,4 @@
-# Chameleon Testing with Schizophrenic Behaviour
+# Mock Test like a Chameleon (with Schizophrenic Behaviour)
 **We are not walking like an Egyptian, we are Mocking like a Chameleon**
 
 ## Problem Statement
