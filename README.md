@@ -1,4 +1,5 @@
 # Chameleon Testing with Schizophrenic Behaviour
+**We are not walking like an Egyptian, we are Mocking like a Chameleon**
 
 ## Chameleon Testing Philosophy
 
