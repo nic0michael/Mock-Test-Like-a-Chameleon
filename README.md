@@ -28,7 +28,7 @@ This enables comprehensive testing of error handling, edge cases, and service re
 
 ---
 
-## Project Structure
+## Example Project Structure
 
 ```mermaid
 graph TD
@@ -70,7 +70,7 @@ graph TD
 
 ---
 
-## REST Flow
+## Example Project REST Flow
 
 ```mermaid
 sequenceDiagram
@@ -101,7 +101,7 @@ sequenceDiagram
 
 ---
 
-## Unit Tests
+## Example Project Unit Tests
 
 ```mermaid
 graph TD
@@ -134,7 +134,7 @@ This approach allows thorough testing of error handling and service resilience w
 
 ---
 
-## Running the application in dev mode
+## Running the Example Project application in dev mode
 
 You can run your application in development mode, which enables live coding, using:
 
@@ -148,7 +148,7 @@ Then access the REST endpoint:
 GET http://localhost:8080/calculate/addTwoTo/5
 ```
 
-The service will return either the calculated result or an appropriate error message depending on the behaviour simulated.
+The service will return either the calculated result or an appropriate error message, depending on the behaviour simulated.
 
 
 ---
