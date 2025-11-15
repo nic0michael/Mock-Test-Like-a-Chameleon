@@ -1,6 +1,8 @@
 # Mock Unit Tests like a Chameleon 
 # (Better TDD with colourful Behaviour)
 **We are not walking like an Egyptian, we are Mocking like a Chameleon**
+## Description
+This provides a way to get Clean, Unit-Tested Code using Mock Classes with 3 behaviours
 
 ## Problem Statement
 1. **Using Mockito** to write unit tests as an afterthought **produces brittle unit tests**.
