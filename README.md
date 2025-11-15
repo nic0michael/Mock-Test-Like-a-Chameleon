@@ -231,3 +231,8 @@ The service will return either the calculated result or an appropriate error mes
 
 
 ---
+
+## License 
+MIT Licnse
+
+---
